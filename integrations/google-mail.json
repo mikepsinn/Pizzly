@@ -1,6 +1,6 @@
 {
   "name": "Gmail",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/New_Logo_Gmail.svg",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Gmail_Icon_%282013-2020%29.svg",
   "auth": {
     "authorizationURL": "https://accounts.google.com/o/oauth2/v2/auth",
     "tokenURL": "https://www.googleapis.com/oauth2/v4/token",
