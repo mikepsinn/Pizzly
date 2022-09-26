@@ -1,7 +1,7 @@
 # This is the Dockerfile for building a production image with Pizzly
 
 
-# Build image 
+# Build image
 FROM node:14-alpine
 
 WORKDIR /app
@@ -19,6 +19,11 @@ RUN yarn install && yarn build
 # Actual image to run from.
 FROM node:14-alpine
 
+# Install Doppler CLI
+RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.key' -O /etc/apk/keys/cli@doppler-8004D9FF50437357.rsa.pub && \
+    echo 'https://packages.doppler.com/public/cli/alpine/any-version/main' | tee -a /etc/apk/repositories && \
+    apk add doppler
+
 # Make sure we have ca certs for TLS
 RUN apk --no-cache add ca-certificates
 
@@ -32,4 +37,6 @@ COPY --chown=node:node --from=0 /app/dist/ .
 COPY --chown=node:node --from=0 /app/views ./views
 COPY --chown=node:node --from=0 /app/node_modules ./node_modules
 
-CMD ["node", "./src/index.js"]
+# Testing purposes only!
+# CMD ["printenv"]
+CMD ["doppler", "run", "--", "node", "./src/index.js"]

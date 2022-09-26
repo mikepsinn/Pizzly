@@ -20,19 +20,16 @@ This tutorial is intended for those interested in consuming OAuth based APIs, su
    ```bash
    git clone https://github.com/Bearer/Pizzly
    ```
-
 2. Change to the directory:
 
    ```bash
    cd Pizzly
    ```
-
 3. Install dependencies for the project (you can also use `npm`):
 
    ```bash
    yarn install
    ```
-
 4. Setup the database. Pizzly uses PostgreSQL. If you don't have it yet, you will need to [install it first](https://www.postgresql.org/docs/9.3/tutorial-install.html).
 
    ```bash
@@ -40,13 +37,11 @@ This tutorial is intended for those interested in consuming OAuth based APIs, su
    ```
 
    _Tip: Pizzly uses the default PostgreSQL's user (`username=postgresql` and `password=` <empty string>). If you are using another user or password, copy the `.envrc.example` file to `.envrc` and update the following environment variables `DB_PASSWORD` and `DB_USER`._
-
 5. Start the local server:
 
    ```bash
    yarn start
    ```
-
 6. View app in your browser by opening:
 
    ```
@@ -61,19 +56,16 @@ This tutorial is intended for those interested in consuming OAuth based APIs, su
    ```
    http://localhost:8080/auth/callback
    ```
-
 3. Open Pizzly dashboard and select the GitHub API, or access it directly through the following URL:
 
    ```
    http://localhost:8080/dashboard/github
    ```
-
 4. Click on "New Configuration" and input the following information:
 
    1. Use the "Client ID" / "Client Secret" provided by GitHub when creating an OAuth Application.
    2. For the `scopes` field, enter `user`.
    3. Save the form to save the credentials in the database.
-
 5. Click the "Connect to GitHub" button, or open the following page in your browser and click on "Connect to GitHub":
 
    ```

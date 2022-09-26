@@ -8,9 +8,9 @@
 
 <div align="center">
 
-<img src="/views/assets/img/logos/pizzly.png?raw=true" width="300">
+<img src="/views/assets/img/logos/pizzly.png?raw=true" width="300" alt="logo">
 
-[How it works?](#how-it-works) - [Getting started](#getting-started) - [Documentation](#documentation)  
+[How it works?](#how-it-works) - [Getting started](#getting-started) - [Documentation](#documentation)
 [Examples](#examples) - [Supported APIs](#supported-apis) - [Contributing](#contributing)
 
 </div>
@@ -37,10 +37,10 @@ Pizzly can be installed anywhere (AWS, Heroku, Platform.sh, etc.). Here's a quic
 
 1. First, deploy your own instance of Pizzly by clicking a deploy button below:
 
+
    | Heroku                                                                                                                                                                                                                  | Platform.sh                                                                                                                                                                                                                                                                                                                                                                         |
    | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
    | <a href="https://heroku.com/deploy?template=https://github.com/Bearer/Pizzly" rel="nofollow" target="_blank"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" width="184" height="40"></a> | <a href="https://console.platform.sh/projects/create-project/?template=https://github.com/Bearer/Pizzly&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://github.com/Bearer/Pizzly" rel="nofollow"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg" alt="Deploy with Platform.sh" width="180" height="40"></a> |
-
 2. Once deployed, open your app. You will land on Pizzly's dashboard.
 3. Click on "Open Dashboard" and select the API you want to integrate with.
 4. Now, configure the API by entering your credentials and scopes. That's all it takes to configure a new API.
@@ -49,7 +49,6 @@ Pizzly can be installed anywhere (AWS, Heroku, Platform.sh, etc.). Here's a quic
    ```bash
    npm install pizzly-js
    ```
-
 6. Then open your frontend app and copy-paste the following code:
 
    ```js
@@ -65,7 +64,6 @@ Pizzly can be installed anywhere (AWS, Heroku, Platform.sh, etc.). Here's a quic
    ```
 
    This snippet code will open a popup in your browser to start an authorization flow with the provided API. On success you will obtain an `authId` which will be be used in the next step.
-
 7. _In your frontend again_, use the previously obtained `authId` to perform a request to the API using the code below:
 
    ```js
@@ -145,7 +143,7 @@ And adding new APIs is straightforward. Just create a new configuration file wit
 Pizzly originally started at Bearer as a way to simplify the developer's journey and ease the building of API integrations. OAuth is a great framework, but the difficulty and wide range of implementation makes it painful to use and tends to slow down the ability to integrate with new APIs.
 
 _But seriously, why Pizzly? We're fan of bears and fell in love with this [sweet hybrid](https://en.wikipedia.org/wiki/Grizzly–polar_bear_hybrid) one 🐻_
- 
+
 ## Contributing
 
 While Pizzly is actively backed by Bearer's engineering team, the main purpose of this repository is to continue to improve Pizzly, making it larger and easier to use. We are grateful to each contributors and encourage you to participate by reporting bugs, ask for improvements and propose changes to the code.

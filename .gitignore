@@ -11,3 +11,5 @@ coverage/
 .DS_Store
 dist/
 yarn-error.log
+/.idea
+/.run/

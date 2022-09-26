@@ -1,7 +1,24 @@
+// app.js
+import * as path from "path";
+const settings = require("../settings.js");
+
+
+if(!process.env.DATABASE_URL) {
+  const secrets = JSON.parse(
+      require('child_process').execSync('node ../doppler-secrets.js')
+  )
+  for(const key in secrets) {
+    let secret = secrets[key];
+    if(typeof secret !== 'undefined' && secret !== null) {
+      process.env[key] = secret
+    }
+  }
+}
 import express from 'express'
 import Bearer from '@bearer/node-agent'
 import telemetry from './lib/telemetry'
 import * as routes from './routes'
+// doppler-secrets.js
 
 export const BUID = 'bearerUid' // TODO - What is this for?
 export const PORT = process.env.PORT || 8080
@@ -9,7 +26,14 @@ export const PORT = process.env.PORT || 8080
 const app = express()
 
 app.set('view engine', 'ejs')
-app.set('views', './views')
+let viewPath = '/views';
+
+function absPath(filePath) {
+  return path.join(settings.PROJECT_DIR, filePath);
+}
+
+let viewDir = absPath(viewPath)
+app.set('views', viewDir)
 app.set('trust proxy', 1)
 
 /**
@@ -34,7 +58,7 @@ app.use((req, _res, next) => {
  * Assets
  */
 
-app.use('/assets', express.static('./views/assets'))
+app.use('/assets', express.static(absPath('./views/assets')))
 
 /**
  * Pizzly's homepage
