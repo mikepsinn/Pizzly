@@ -1,4 +1,27 @@
-**⭐ Pizzly is looking for new maintainers! If you're interested, check out the [discussion post](https://github.com/Bearer/Pizzly/discussions/259). ⭐**
+
+# :tada: This project is maintained again! - [and needs your input](https://github.com/NangoHQ/Pizzly/issues/263) :tada:
+Hello fellow Pizzly users!
+
+We are Nango, a young team working on [open-source tools](https://github.com/NangoHQ/nango) to make working with 3rd party APIs fast & simple for engineers.
+We just took over Pizzly from the original authors, the [bearer team](https://www.bearer.com/?ref=pizzly) and are very much looking forward to giving it a new life and roadmap!
+
+Here is our current plan:
+- Short term (next 1-2 weeks) we are focused on getting Pizzly running again (see next section)
+- Beyond that we are looking to make it better. For this we need your input here: https://github.com/NangoHQ/Pizzly/issues/263
+
+Meanwhile, if you want to get involved or talk with us please join our [Slack community](https://nango.dev/slack) where we are very active.
+
+BIG THANKS to the Bearer team and all the contributors for their hard work! 🐻 👏  
+Pizzly has gained a strong following because it is one of the fastest and simplest ways to work with APIs that use OAuth. We look forward to continue this mission together with the community :)
+
+## Current state of Pizzly (last update: 16th Nov 2022)
+Pizzly currently does not run locally with the latest stable version of node (18.x)
+
+The 1-click Heroku deployment button still works, but means you will need to pay for the deployment starting November 28th when Heroku expires its free tier.
+
+Fixing Pizzly is our first priority. If you need help with your instance in the meantime please open an issue or reach out to us on the [Slack community](https://nango.dev/slack). We will do our best to help.
+
+---
 
 <a href="https://heroku.com/deploy?template=https://github.com/Bearer/Pizzly" rel="nofollow"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="26"></a>
 <a href="https://console.platform.sh/projects/create-project/?template=https://github.com/Bearer/Pizzly&utm_campaign=deploy_on_platform?utm_medium=button&utm_source=affiliate_links&utm_content=https://github.com/Bearer/Pizzly" rel="nofollow"><img src="https://platform.sh/images/deploy/deploy-button-lg-blue.svg" alt="Deploy with Platform.sh" height="26"></a>
