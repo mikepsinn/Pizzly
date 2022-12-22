@@ -33,7 +33,7 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express-session": "^1.17.3",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^2.3.0",
     "lodash.at": "^4.6.0",
     "lodash.omit": "^4.5.0",
